@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    #Config Server URL
+    config:
+      uri: http://192.168.1.119:8888
+
