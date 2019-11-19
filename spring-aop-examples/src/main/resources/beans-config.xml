@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!-- Enable AspectJ style of Spring AOP -->
+<!-- <aop:aspectj-autoproxy /> -->
+
+<!-- Configure Employee Bean and initialize it -->
+ <bean name="employee" class="com.examples.spring.aop.model.Employee">
+	<property name="name" value="Sendil"></property>
+</bean>
+
+<bean name="employeeService" class="com.examples.spring.aop.service.EmployeeService">
+	<property name="employee" ref="employee"></property>
+</bean>
+
+<!-- Configure Aspect Beans, without this Aspect's advices wont execute -->
+<!-- Annotation based AOP configuration -->
+<!-- <bean name="employeeAspect" class="com.examples.spring.aop.aspect.EmployeeAspect"/> -->
+<!-- <bean name="employeeAspectPointcut" class="com.examples.spring.aop.aspect.EmployeeAspectPointcut"/> -->
+<!-- <bean name="employeeAspectJoinPoint" class="com.examples.spring.aop.aspect.EmployeeAspectJoinPoint"/>  -->
+<!-- <bean name="employeeAfterAspect" class="com.examples.spring.aop.aspect.EmployeeAfterAspect"/> -->
+<!-- <bean name="employeeAroundAspect" class="com.examples.spring.aop.aspect.EmployeeAroundAspect"/> -->
+<!-- <bean name="employeeAnnotationAspect" class="com.examples.spring.aop.aspect.EmployeeAnnotationAspect"/> -->
+
+<!-- Spring AOP XML Configuration Aspect Bean Definition-->
+<!-- <bean name="employeeXMLConfigAspect" class="com.examples.spring.aop.aspect.EmployeeXMLConfigAspect"/> -->
+
+<!-- Spring AOP XML Configuration -->
+<!-- <aop:config>
+	<aop:aspect ref="employeeXMLConfigAspect" id="loggingAspectXMLConfig" order="1">
+		<aop:pointcut expression="execution(* com.examples.spring.aop.model.Employee.*(..))" id="selectAll"/>
+  		<aop:pointcut expression="execution(* com.examples.spring.aop.model.Employee.set*(..))" id="selectSetter"/>
+		<aop:pointcut expression="execution(* com.examples.spring.aop.model.Employee.get*(..))" id="selectGetter"/>
+		<aop:pointcut expression="execution(* com.examples.spring.aop.model.Employee.throw*(..))" id="selectException"/>
+		
+	 	<aop:before method="beforeAdvice" pointcut-ref="selectAll"/>		
+ 		<aop:around method="employeeAroundAdvice" pointcut-ref="selectAll" arg-names="proceedingJoinPoint"/>
+ 		<aop:after-returning method="returningAdvice" pointcut-ref="selectAll" returning="retVal"/>		
+		<aop:after-throwing method="afterThrow" pointcut-ref="selectException" throwing="ex"/>
+		<aop:after method="afterAdvice" pointcut-ref="selectAll"/>		
+	</aop:aspect>
+</aop:config> -->
+
+</beans>
