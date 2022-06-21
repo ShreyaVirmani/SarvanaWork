@@ -10,7 +10,7 @@
 		<java-version>8</java-version>
 		<org.springframework-version>5.1.5.RELEASE</org.springframework-version>
 		<org.hibernate-version>5.4.2.Final</org.hibernate-version>
-		<mysql-connector-verion>5.1.47</mysql-connector-verion>
+		<mysql-connector-verion>8.0.28</mysql-connector-verion>
 	</properties>
 
 	<dependencies>
