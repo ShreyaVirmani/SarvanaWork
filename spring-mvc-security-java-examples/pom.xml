@@ -10,7 +10,7 @@
 
 	<properties>
 		<java-version>8</java-version>
-		<org.springframework-version>5.0.0.RELEASE</org.springframework-version>
+		<org.springframework-version>5.2.20.RELEASE</org.springframework-version>
 		<spring-security-version>5.0.0.RELEASE</spring-security-version>
 		<javax.servlet-api-version>4.0.0</javax.servlet-api-version>
 		<javax.servlet.jsp-api-version>2.3.3</javax.servlet.jsp-api-version>
