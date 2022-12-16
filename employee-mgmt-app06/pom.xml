@@ -11,7 +11,7 @@
 
 	<properties>
 		<java-version>8</java-version>
-		<org.springframework-version>5.1.9.RELEASE</org.springframework-version>
+		<org.springframework-version>5.2.20.RELEASE</org.springframework-version>
 		<javax.servlet-api-version>4.0.0</javax.servlet-api-version>
 		<jackson.library>2.9.5</jackson.library>
 		<javax.validation-api-version>2.0.0.Final</javax.validation-api-version>
